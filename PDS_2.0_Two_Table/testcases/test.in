@@ -1,0 +1,4 @@
+STORE tabA 101 1 Alice 123_Apple_St alice@apple.com
+STORE tabA 102 1 Bob 456_Banana_Ave bob@banana.com
+STORE tabA 103 1 Charlie 789_Cherry_Blvd charlie@cherry.com
+STORE tabB 201 1 Dave 111_Date_Dr dave@date.com
