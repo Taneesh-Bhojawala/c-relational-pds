@@ -1,0 +1,55 @@
+CREATE stressful_db 0
+OPEN stressful_db 0
+STORE 100 0 DataStructures Sahni
+STORE 200 0 Algorithms Cormen
+STORE 300 0 OperatingSystems Stallings
+STORE 400 0 ComputerNetworks Tanenbaum
+STORE 500 0 DatabaseSystems Navathe
+UPDATE 300 0 OS_Internals Stallings_V2
+SEARCH 300 0 OS_Internals Stallings_V2
+DELETE 200 0
+DELETE 400 0
+SEARCH 200 1
+SEARCH 400 1
+SEARCH 100 0 DataStructures Sahni
+SEARCH 300 0 OS_Internals Stallings_V2
+SEARCH 500 0 DatabaseSystems Navathe
+UPDATE 200 1 GhostUpdate GhostAuthor
+CLOSE 0
+OPEN stressful_db 0
+SEARCH 200 1
+SEARCH 400 1
+SEARCH 300 0 OS_Internals Stallings_V2
+UNDELETE 200 0
+SEARCH 200 0 Algorithms Cormen
+UPDATE 200 0 AdvancedAlgo Cormen_V2
+SEARCH 200 0 AdvancedAlgo Cormen_V2
+DELETE 100 0
+SEARCH 100 1
+UNDELETE 400 0
+SEARCH 400 0 ComputerNetworks Tanenbaum
+DELETE 400 0
+UNDELETE 400 0
+DELETE 400 0
+SEARCH 400 1
+CLOSE 0
+OPEN stressful_db 0
+SEARCH 100 1
+SEARCH 400 1
+SEARCH 200 0 AdvancedAlgo Cormen_V2
+UNDELETE 100 0
+SEARCH 100 0 DataStructures Sahni
+STORE 600 0 MachineLearning Mitchell
+STORE 700 0 DeepLearning Goodfellow
+DELETE 600 0
+UNDELETE 600 0
+SEARCH 600 0 MachineLearning Mitchell
+DELETE 600 0
+SEARCH 600 1
+DELETE 999 1
+UNDELETE 999 1
+DELETE 200 0
+DELETE 200 1
+UNDELETE 200 0
+SEARCH 200 0 AdvancedAlgo Cormen_V2
+CLOSE 0
