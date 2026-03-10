@@ -1,0 +1,16 @@
+CREATE RecA RecB 0
+OPEN RecA RecB 0
+STORE RecA 5 0 Alive_Rec Alive_Addr alive@test.com
+DELETE RecA 5 0
+DELETE RecA 5 1
+UPDATE RecA 5 1 Mod_Rec Mod_Addr mod@test.com
+SEARCH RecA 5 1
+UNDELETE RecA 5 0
+UNDELETE RecA 5 1
+SEARCH RecA 5 0 Alive_Rec Alive_Addr alive@test.com
+UPDATE RecA 5 0 Mod_Rec Mod_Addr mod@test.com
+SEARCH RecA 5 0 Mod_Rec Mod_Addr mod@test.com
+UNDELETE RecA 99 1
+UPDATE RecA 99 1 Ghost_Rec Ghost_Addr ghost@test.com
+DELETE RecA 99 1
+CLOSE 0

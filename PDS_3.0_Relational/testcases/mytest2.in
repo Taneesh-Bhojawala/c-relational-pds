@@ -1,0 +1,23 @@
+CREATE StateA StateB 0
+OPEN StateA StateB 0
+OPEN StateA StateB 1
+CLOSE 0
+CLOSE 1
+STORE StateA 1 1 Closed_Rec Closed_Addr closed@test.com
+SEARCH StateA 1 1
+UPDATE StateA 1 1 Closed_Rec Closed_Addr closed@test.com
+DELETE StateA 1 1
+UNDELETE StateA 1 1
+OPEN StateA StateB 0
+STORE StateA 10 0 Persist_Rec Persist_Addr persist@test.com
+STORE StateB 20 0 Persist_RecB Persist_AddrB persistB@test.com
+CLOSE 0
+OPEN StateA StateB 0
+SEARCH StateA 10 0 Persist_Rec Persist_Addr persist@test.com
+SEARCH StateB 20 0 Persist_RecB Persist_AddrB persistB@test.com
+REL_CREATE StateRel StateA StateB 0
+REL_OPEN StateRel 0
+REL_STORE 10 20 0
+REL_CLOSE 0
+REL_CLOSE 1
+CLOSE 0

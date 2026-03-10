@@ -1,0 +1,47 @@
+CLOSE 1
+REL_CLOSE 1
+CREATE TableA TableB 0
+OPEN TableA TableB 0
+OPEN TableA TableB 1
+STORE TableA 10 0 Rec_A10 Addr_A10 email10@test.com
+STORE TableB 20 0 Rec_B20 Addr_B20 email20@test.com
+SEARCH TableA 10 0 Rec_A10 Addr_A10 email10@test.com
+SEARCH TableA 99 1
+UPDATE TableA 99 1 Fake_Rec Fake_Addr fake@test.com
+DELETE TableA 99 1
+UNDELETE TableA 99 1
+DELETE TableA 10 0
+SEARCH TableA 10 1
+UPDATE TableA 10 1 Mod_A10 Addr_A10 email10@test.com
+UNDELETE TableA 10 0
+SEARCH TableA 10 0 Rec_A10 Addr_A10 email10@test.com
+UNDELETE TableA 10 1
+REL_CREATE RelAB TableA TableB 0
+REL_OPEN RelAB 0
+REL_OPEN RelAB 1
+REL_STORE 10 99 1
+REL_STORE 99 20 1
+REL_STORE 10 20 0
+REL_SEARCH 10 0 20 Rec_B20 Addr_B20 email20@test.com
+DELETE TableA 10 0
+REL_SEARCH 10 1
+UNDELETE TableA 10 0
+REL_SEARCH 10 1
+STORE TableA 11 0 Rec_A11 Addr_A11 email11@test.com
+STORE TableB 21 0 Rec_B21 Addr_B21 email21@test.com
+REL_STORE 11 21 0
+DELETE TableB 21 0
+REL_SEARCH 11 1
+UNDELETE TableB 21 0
+REL_SEARCH 11 1
+STORE TableA 12 0 Rec_A12 Addr_A12 email12@test.com
+STORE TableB 22 0 Rec_B22 Addr_B22 email22@test.com
+REL_STORE 12 22 0
+REL_DELETE 22 1 0
+REL_SEARCH 12 1
+REL_CLOSE 0
+REL_CLOSE 1
+CLOSE 0
+CLOSE 1
+REL_OPEN RelAB 1
+REL_STORE 11 21 1
